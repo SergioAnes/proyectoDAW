@@ -119,11 +119,12 @@ CREATE TABLE empleados (
   nombre varchar(50) NOT NULL,
   apellido varchar(50) NOT NULL,
   email varchar(100) NOT NULL,
+  password varchar(50) NOT NULL,
   PRIMARY KEY (IdEmpleado)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Datos de la tabla empleados */
-insert into empleados(IdEmpleado,nombre,apellido,email) values 
-(1002,'Sergio','Anes','sergio.agalann@gmail.com'),
-(1056,'Maria','Pérez','mariaperez@gmail.com'),
-(1076,'Miguel','Jiménez','migueljimenez@gmail.com');
+insert into empleados(IdEmpleado,nombre,apellido,email,password) values 
+(1002,'Sergio','Anes','sergio.agalann@gmail.com','anessergio'),
+(1056,'Maria','Pérez','mariaperez@gmail.com','perezmaria'),
+(1076,'Miguel','Jiménez','migueljimenez@gmail.com','jimenezmiguel');
