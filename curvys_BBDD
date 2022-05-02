@@ -114,7 +114,6 @@ insert into pagos(IdCliente,checkNumber,fechaPago,cantidad) values
 
 /*Estructura de la tabla empleados */
 DROP TABLE IF EXISTS empleados;
-
 CREATE TABLE empleados (
   IdEmpleado int(11) NOT NULL,
   nombre varchar(50) NOT NULL,
