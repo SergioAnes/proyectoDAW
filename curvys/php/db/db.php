@@ -2,7 +2,7 @@
 
   $servername = "localhost";
   $username = "root";
-  $password = "";
+  $password = "rootroot";
   $dbname = "curvys";
 
   try {
