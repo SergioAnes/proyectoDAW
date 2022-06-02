@@ -1,0 +1,45 @@
+.card.border-success.mb-3{
+	
+	align-items: center;
+    background: aliceblue;
+    border-color: black!important;
+    opacity: 0.6;
+    border-radius: 63px;
+}
+.card.border-success.mb-3:hover{
+	
+	
+    opacity: 1;
+
+}
+
+.card-header {
+	font-size: 24px;
+    font-weight: 800;
+    width: 100%;
+    text-align: center;
+ 
+}
+body{
+	display: flex;
+    flex-direction: column;
+	background-image: url("../img/fondo-loggin.jpg");
+}
+h1{
+	text-align: center;
+    font-family: inherit;
+    font-size: 59px;
+	margin-top: -20px;
+    margin-bottom: 29px;
+	font-weight: bolder;
+}
+.container{
+	width:475px;
+}
+input[type="submit"] {
+	    margin-top: 13px;
+}
+img {
+	margin: 19px 0px -7px 31px;
+    width: 41px;
+}
