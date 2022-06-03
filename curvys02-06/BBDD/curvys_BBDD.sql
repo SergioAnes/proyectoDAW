@@ -41,11 +41,11 @@ insert into lineasProducto(lineaProducto,descripcion) values
 /*Estructura de la tabla pedidos */
 DROP TABLE IF EXISTS pedidos;
 CREATE TABLE pedidos (
-  numeroPedido int(11) NOT NULL,
+  numeroPedido INT(10) NOT NULL AUTO_INCREMENT,
   fechaPedido date NOT NULL,
   fechaEnvio date DEFAULT NULL,
   estado varchar(15) NOT NULL,
-  comentarios text,
+  precioTotal decimal(10,2) NOT NULL,
   IdCliente int(11) NOT NULL,
   PRIMARY KEY (numeroPedido),
   KEY IdCliente (IdCliente),
@@ -53,10 +53,11 @@ CREATE TABLE pedidos (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Datos de la tabla pedidos */
-insert into pedidos(numeroPedido,fechaPedido,fechaEnvio,estado,comentarios,IdCliente) values 
-(1,'2003-01-06','2003-01-10','Shipped',NULL,103);
+insert into pedidos(fechaPedido,fechaEnvio,estado,precioTotal,IdCliente) values 
+('2022-01-06','2022-01-10','Shipped',20.5,103),
+('2022-05-16','2022-05-18','Shipped',200.3,103);
 
-CREATE TABLE productos2
+CREATE TABLE tablaPivoteProductos
 (
   codigoProducto INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY
 );	
@@ -83,8 +84,8 @@ CREATE TRIGGER `trigger_productos2`
 BEFORE INSERT ON `productos`
 FOR EACH ROW
 BEGIN
-  INSERT INTO productos2 VALUES (NULL);
-  SET NEW.codigoProducto=CONCAT('P00-',LAST_INSERT_ID()+1);
+  INSERT INTO tablaPivoteProductos VALUES (NULL);
+  SET NEW.codigoProducto=CONCAT('P00-',LAST_INSERT_ID());
 END//
 DELIMITER ;
 
@@ -116,7 +117,8 @@ CREATE TABLE detallesPedido (
 /*Datos de la tabla detallesPedido */
 insert into detallesPedido(numeroPedido, codigoProducto, cantidadPedida,precioUnidad) values 
 (1, 'P00-2', 50,'55.09'),
-(1, 'P00-3', 30, '75.46');
+(1, 'P00-3', 30, '75.46'),
+(2, 'P00-3', 25,'35.09');
 
 /*Estructura de la tabla pagos */
 DROP TABLE IF EXISTS pagos;
