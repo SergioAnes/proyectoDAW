@@ -34,7 +34,7 @@ include_once("../controllers/nproduct_controller.php");
 ?>
 
     <label for="linea"> Selecciona linea de producto</label>
-    <select name="linea" class="controls">
+    <select name="linea">
       <?php
         foreach($desplegableLista as $registro){
           echo "<option value='".$registro['lineaProducto']."'>".$registro['lineaProducto']."</option>";
@@ -54,7 +54,7 @@ include_once("../controllers/nproduct_controller.php");
 
     <input class="botons" type="submit" value="Registrar producto" name="registrar">
 
-     <a href="alqwelcome_view.php"> Volver al menú </a>
+     <a href="../../index.html"> Volver al menú </a>
 
     <label for="resultado" name="resultado" class="errorFormulario"> <?php echo $resultado;?> </label>
 

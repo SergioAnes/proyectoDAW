@@ -56,7 +56,6 @@ $resultado = ""; //variable inicialmente vacía para que no salte ningún error 
             else{
                 echo "<h2>No ha podido transferirse el fichero</h2>";
             }
-
         }else {
             $imgURL=obtenerImagen($codigoProducto);
         }*/
@@ -65,8 +64,8 @@ $resultado = ""; //variable inicialmente vacía para que no salte ningún error 
 
         if ($_FILES['image']['name'] != null) {
             $image = $_FILES['image']['name'];
-            $imgURL = "http://localhost/curvys19-05/img/" . "$image";
-            $destino = 'C:/wamp64/www/curvys19-05/img/';
+            $imgURL = "http://localhost:81/curvys02-06New/img/" . "$image";
+            $destino = 'C:/wamp/www/curvys02-06/img/';
         
             if (copy ($_FILES['image']['tmp_name'], $destino . $_FILES['image']['name'])) {
                 echo "<h2>Se ha transferido la imagen ". $_FILES['image']['name']. "</h2>";

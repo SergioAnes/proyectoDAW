@@ -45,5 +45,3 @@ include_once("../controllers/consulta_controller.php");
 </form>
 </body>
 </html>
-  
-    

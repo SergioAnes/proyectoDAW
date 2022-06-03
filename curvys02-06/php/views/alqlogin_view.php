@@ -31,9 +31,6 @@
       Clave <input type="password" name="passcode" placeholder="passcode" class="form-control">
         </div>        
         
-        <label for="resultado" name="resultado" style="color:red" class="errorFormulario"> <?php echo $resultado1;?> </label>
-        <br>
-
     <input type="submit" name="submit" value="Login" >
         </form>
     
@@ -57,9 +54,6 @@
     <div class="form-group">
       Clave <input type="password" name="passcode" placeholder="passcode" class="form-control">
         </div>        
-
-         <label for="resultado" name="resultado" style="color:red" class="errorFormulario"> <?php echo $resultado2;?> </label>
-          <br>
         
     <input type="submit" name="submit" value="Login" >
         </form>

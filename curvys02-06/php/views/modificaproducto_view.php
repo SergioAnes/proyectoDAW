@@ -59,5 +59,3 @@ include_once("../controllers/modificaproducto_controller.php");
 </form>
 </body>
 </html>
-  
-    

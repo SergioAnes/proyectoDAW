@@ -7,18 +7,19 @@ session_start();
 
 
 //Si alguien se mete en esta página de forma directa sin loguear, regresa al index. 
-if(!isset($_SESSION['IdCliente'])){
+
+if(!isset($_SESSION['IdEmpleado'])){
         header("location: ../index.php");
     
 }else{
-        $IdCliente = $_SESSION['IdCliente']; 
+        $IdEmpleado = $_SESSION['IdEmpleado']; 
     }
 
 
 	if (isset($_POST['consultar'])) {
 
-      $IdCliente=$_SESSION['IdCliente'];
-      $informacionPedidos = consultaPedidos($IdCliente);
+      $IdEmpleado=$_SESSION['IdEmpleado'];
+      $informacionPedidos = consultaPedidos($IdEmpleado);
 
       echo "<br> <br> <table border='2'>";
                   echo "<thead> <tr> <th colspan='3'> Información de pedidos </th> </tr> </thead>

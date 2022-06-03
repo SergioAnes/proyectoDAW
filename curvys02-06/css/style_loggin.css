@@ -13,10 +13,6 @@
 
 }
 
-.errorFormulario{ /*Los errores que vayan apareciendo*/
-  color:red;
-}
-
 .card-header {
 	font-size: 24px;
     font-weight: 800;

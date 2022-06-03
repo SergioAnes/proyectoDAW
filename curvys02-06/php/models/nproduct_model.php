@@ -21,10 +21,11 @@ function insertarProductos ($nombreProducto, $lineaProducto, $descripcionProduct
       global $conexion;
 
       $sqlConsulta = "INSERT INTO productos (nombreProducto, lineaProducto, descripcionProducto, cantidadStock, precioCompra, img) values ('$nombreProducto','$lineaProducto', '$descripcionProducto', '$cantidadStock','$precioCompra','$img')";
-       try {
+	
+	  try {
             $resultado = $conexion-> prepare($sqlConsulta); // Se prepara.
             $resultado->execute(); //Se ejecuta.
-            //echo "Datos insertados en la tabla de pagos  <br>";
+            echo "Datos insertados en la tabla de pagos  <br>";
       }catch(PDOException $e){
              echo "No se han podido insertar los datos en la tabla <br>", $e-> getMessage();
        }
